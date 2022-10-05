@@ -1,4 +1,6 @@
-package be.pxl.ja.robbery;
+package be.pxl.ja.knapsack;
+
+import be.pxl.ja.robbery.Product;
 
 import java.util.List;
 

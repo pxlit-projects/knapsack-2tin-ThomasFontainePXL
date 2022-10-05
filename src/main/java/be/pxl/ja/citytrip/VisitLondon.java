@@ -1,7 +1,6 @@
 package be.pxl.ja.citytrip;
 
-import be.pxl.ja.robbery.Knapsack;
-import be.pxl.ja.robbery.KnapsackUtil;
+import be.pxl.ja.knapsack.Knapsack;
 
 public class VisitLondon {
     public static void main(String[] args) {

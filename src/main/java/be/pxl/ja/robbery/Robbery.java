@@ -1,5 +1,8 @@
 package be.pxl.ja.robbery;
 
+import be.pxl.ja.knapsack.Knapsack;
+import be.pxl.ja.knapsack.KnapsackUtil;
+
 public class Robbery {
     public static void main(String[] args) {
         Knapsack knapsack = new Knapsack(35);

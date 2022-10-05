@@ -15,7 +15,8 @@ public class Attraction implements Comparable<Attraction>{
     private int ratings;
 
     @Override
-    public int compareTo(Attraction o) {
-        return 0;
+    public int compareTo(Attraction attraction) {
+        return Double.compare(attraction.getDays(), days);
+
     }
 }

@@ -1,6 +1,5 @@
 package be.pxl.ja.robbery;
 
-import be.pxl.ja.knapsack.Item;
 import be.pxl.ja.knapsack.Knapsack;
 import be.pxl.ja.knapsack.KnapsackUtil;
 import be.pxl.ja.knapsack.Product;
@@ -17,8 +16,7 @@ public class Robbery {
         KnapsackUtil.fill(knapsack, shop);
 
         System.out.println("\nList of products:");
-        for (Item product : knapsack.getItems()) {
-            System.out.println(product);
-        }
+
+        knapsack.getItems().forEach(System.out::println);
     }
 }

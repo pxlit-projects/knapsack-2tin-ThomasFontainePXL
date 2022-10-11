@@ -18,8 +18,7 @@ public class VisitLondon {
         KnapsackUtil.fill(knapsack, attractions);
 
         System.out.println("\nList of attractions:");
-        for (Attraction attraction : knapsack.getItems()) {
-            System.out.println(attraction);
-        }
+        knapsack.getItems().forEach(System.out::println);
+
     }
 }

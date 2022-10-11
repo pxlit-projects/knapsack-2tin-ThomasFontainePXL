@@ -1,4 +1,4 @@
-package be.pxl.ja.robbery;
+package be.pxl.ja.knapsack;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class Product implements Comparable<Product>{
+public class Product implements Item, Comparable<Product>{
     private String name;
     private double weight;
     private double price;

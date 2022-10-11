@@ -1,4 +1,4 @@
-package be.pxl.ja.citytrip;
+package be.pxl.ja.knapsack;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Attraction implements Comparable<Attraction>{
+public class Attraction implements Item, Comparable<Attraction>{
     private String name;
     private double days;
     private int ratings;
@@ -18,5 +18,10 @@ public class Attraction implements Comparable<Attraction>{
     public int compareTo(Attraction attraction) {
         return Double.compare(attraction.getDays(), days);
 
+    }
+
+    @Override
+    public double getWeight() {
+        return days;
     }
 }

@@ -1,23 +1,22 @@
 package be.pxl.ja.knapsack;
 
-import be.pxl.ja.robbery.Product;
-import be.pxl.ja.robbery.Shop;
 import lombok.NoArgsConstructor;
-import org.jetbrains.annotations.NotNull;
+
+import java.util.Collections;
+import java.util.List;
 
 @NoArgsConstructor
-public class KnapsackUtil {
-    public static void fill(@NotNull Knapsack knapsack, @NotNull Shop shop) {
-        shop.getItems()
-                .sort(Product::compareTo);
+public class KnapsackUtil<I extends Item> {
+    public static <T extends Comparable<T> & Item> void fill(Knapsack<T> knapsack, Inventory<T> inventory) {
+        List<T> items = inventory.getItems();
+        Collections.sort(items);
 
-        shop.getItems()
-                .forEach(product -> {
-                    try {
-                        knapsack.add(product);
-                    } catch (KnapsackFullException e) {
-                        System.out.println(e.getMessage());
-                    }
-                });
+        for (T item : items) {
+            try {
+                knapsack.add(item);
+            } catch (KnapsackFullException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 }

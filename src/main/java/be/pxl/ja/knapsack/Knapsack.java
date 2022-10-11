@@ -12,11 +12,9 @@ public class Knapsack<I extends Item> {
     }
 
     public double getWeight() {
-        double weight = 0;
-        for(I p : items){
-            weight += p.getWeight();
-        }
-        return weight;
+         return items.stream()
+                 .mapToDouble(Item::getWeight)
+                 .sum();
     }
 
     public List<I> getItems() {
